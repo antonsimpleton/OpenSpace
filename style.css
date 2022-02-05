@@ -1,0 +1,244 @@
+/*
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0c0b1d;
+
+}
+
+.space {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("space.png");
+    background-position: center;
+    position: relative;
+
+}
+
+.planet {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.rocket {
+    width: 17%;
+    position: absolute;
+    bottom: 34%;
+    left: 20%;
+    transform: rotate(32deg);
+}
+
+.control-panel {
+    border: #c3ecbd solid 1px;
+    width: 40vw;
+    height: 60vh;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.text-input {
+    border: #d0ff00 solid 1px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#text-field {
+    width: 60%;
+    height: 4vh;
+    border-radius: 5px;
+}
+
+#ok-button {
+    width: 20%;
+    height: 4vh;
+    border-radius: 5px;
+}
+
+.check-buttons {
+    border: #b9a5d1 solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+[id^="checkbox"] {
+    width: 2.5vw;
+    height: 2.5vw;
+
+}
+
+.levers {
+    border: #ff001e solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.slider-wrapper {
+    display: inline-block;
+    width: 20px;
+    height: 180px;
+    padding: 0;
+}
+
+.slider-wrapper input {
+    width: 180px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 90px 90px;
+    transform: rotate(-90deg);
+
+}
+
+.launch-button {
+    border: #e7d34f solid 1px;
+    display: flex;
+    justify-content: center;
+}
+
+#big-launch-button {
+    width: 20%;
+    height: 4vh;
+    border-radius: 5px;
+
+}
+
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0c0b1d;
+
+}
+
+.space {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("space.png");
+    background-position: center;
+    position: relative;
+
+}
+
+.planet {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.rocket {
+    width: 17%;
+    position: absolute;
+    bottom: 34%;
+    left: 20%;
+    transform: rotate(32deg);
+}
+
+.control-panel {
+    width: 42%;
+    height: 42%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+    background: repeating-linear-gradient(45deg, black, black 10px, yellow 10px, yellow 20px);
+
+}
+
+.control-panel__inner {
+    position: relative;
+    z-index: 2;
+    background-color: #3d3d3d;
+    width: 95%;
+    height: 90%;
+    left: 2.5%;
+    top: 5%;
+}
+
+.control-panel__inner [value="launch"] {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 1%;
+    width: 6vw;
+    height: 4vh;
+    border-radius: 50%;
+    background-color: #ff001e;
+    color: white;
+    border: white solid 1px;
+}
+
+
+.control-panel__inner [type="password"] {
+    border: yellow solid 2px;
+    width: 15vw;
+    position: absolute;
+    top: 5%;
+    left: 27%;
+    background-color: #3d3d3d;
+    border-radius: 6px;
+    color: yellow;
+}
+
+.control-panel__inner [value="ok"] {
+    position: relative;
+    width: 3vw;
+    left: 67%;
+    top: 5%;
+    background-color: yellow;
+    color: #3d3d3d;
+    border-radius: 5px;
+}
+
+
+.check-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 5vh;
+}
+
+.levers {
+    height: 20%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.levers input {
+    transform: rotate(-90deg);
+}
+
+

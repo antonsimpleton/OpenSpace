@@ -1,0 +1,113 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="space">
+    <div class="planet-area">
+        <img class="planet" src="mars.png">
+        <img class="rocket" src="rocket.png">
+    </div>
+    <div class="control-panel">
+        <div class="text-input">
+            <input type="text" id="text-field">
+            <button id="ok-button">ok</button>
+        </div>
+        <div class="check-buttons">
+            <input type="checkbox" id="checkbox-1">
+            <input type="checkbox" id="checkbox-2">
+            <input type="checkbox" id="checkbox-3">
+            <input type="checkbox" id="checkbox-4">
+            <input type="checkbox" id="checkbox-5">
+            <input type="checkbox" id="checkbox-6">
+        </div>
+        <div class="levers">
+            <div class="slider-wrapper">
+                <input type="range" id="slider-1">
+            </div>
+            <div class="slider-wrapper">
+                <input type="range" id="slider-2">
+            </div>
+            <div class="slider-wrapper">
+                <input type="range" id="slider-3">
+            </div>
+            <div class="slider-wrapper">
+                <input type="range" id="slider-4">
+            </div>
+            <div class="slider-wrapper">
+                <input type="range" id="slider-5">
+            </div>
+        </div>
+        <div class="launch-button">
+            <button id="big-launch-button">launch</button>
+        </div>
+    </div>
+</div>
+
+&lt;!&ndash;<script src="main.js"></script>&ndash;&gt;
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Space</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            let buttonOk = document.getElementById("ok-button");
+            let passwordField = document.getElementById("password")
+            let allInputs = document.getElementsByTagName("input");
+            let launchButton = document.getElementById("launch-btn");
+
+            buttonOk.addEventListener("click", () => {
+                if (passwordField.value === "TrustNo1") {
+                    for (let index = 0; index < allInputs.length; index++) {
+                        allInputs[index].removeAttribute("disabled");
+                    }
+                    passwordField.setAttribute("disabled", "disabled");
+                    buttonOk.setAttribute("disabled", "disabled");
+                    launchButton.setAttribute("disabled", "disabled");
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div class="space">
+    <div class="planet-area">
+        <img class="planet" src="mars.png">
+        <img class="rocket" src="rocket.png" id="rocket">
+    </div>
+    <div class="control-panel">
+        <div class="control-panel__inner">
+            <input type="password" placeholder="Enter password to unlock" id="password">
+            <input type="button" value="ok" id="ok-button">
+            <div class="check-buttons">
+                <input type="checkbox" class="checkbox" disabled onchange="StatusChecking()">
+                <input type="checkbox" class="checkbox" disabled onchange="StatusChecking()">
+                <input type="checkbox" class="checkbox" disabled onchange="StatusChecking()">
+                <input type="checkbox" class="checkbox" disabled onchange="StatusChecking()">
+                <input type="checkbox" class="checkbox" disabled onchange="StatusChecking()">
+                <input type="checkbox" class="checkbox" disabled onchange="StatusChecking()">
+            </div>
+            <div class="levers">
+                <input type="range" class="range" disabled onchange="StatusChecking()">
+                <input type="range" class="range" disabled onchange="StatusChecking()">
+                <input type="range" class="range" disabled onchange="StatusChecking()">
+                <input type="range" class="range" disabled onchange="StatusChecking()">
+                <input type="range" class="range" disabled onchange="StatusChecking()">
+            </div>
+            <input type="button" value="launch" id="launch-btn" disabled>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
